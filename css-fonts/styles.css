@@ -1,0 +1,11 @@
+h1 {
+  font-family: 'Lobster', cursive;
+}
+
+h2, p {
+  font-family: 'Patua One', cursive;
+}
+
+p{
+  line-height: 2em;
+}
