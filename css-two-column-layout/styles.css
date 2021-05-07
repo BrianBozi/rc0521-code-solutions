@@ -1,0 +1,68 @@
+.container {
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.col-full {
+  width: 100%;
+}
+
+.col-2 {
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Karla', sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+h3 {
+  font-family: 'Karla', sans-serif;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: 'Karla', sans-serif;
+}
+
+.top-p {
+  text-align: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.inline {
+  display: flex;
+  width: 400px;
+}
+
+.block {
+  margin-top: 50px;
+}
+
+.image {
+  width: 25%;
+  margin-bottom: 50px;
+}
+
+.btn {
+  text-align: center;
+  margin-top: 50px;
+}
+
+button {
+  color: red;
+  border: 1px solid red;
+  background-color: white;
+  padding: 10px 50px 10px 50px;
+  font-family: 'Karla', sans-serif;
+}
