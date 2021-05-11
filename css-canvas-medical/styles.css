@@ -25,6 +25,8 @@ h4 {
 .top-row {
   border-bottom: 1px solid grey;
   margin-top: 3rem;
+  margin-left: -3.5rem;
+  margin-right: -3.5rem;
 }
 
 .one-fourth {
@@ -39,21 +41,23 @@ nav {
 
 .nav-move1 {
   position: relative;
-  left: 4rem;
+  left: 4.5rem;
 }
 
 .nav-move2 {
   position: relative;
-  left: 2rem;
+  left: 2.5rem;
 }
 
 .nav-move3 {
   position: relative;
-  left: 1rem;
+  left: 1.5rem;
 }
 
 .blue-logo {
   width: 40%;
+  position: relative;
+  left: 4rem;
 }
 
 .contact-us {
@@ -61,6 +65,7 @@ nav {
   color: white;
   padding: 8px 20px;
   position: relative;
+  left: 1rem;
   bottom: 0.5rem;
 }
 
