@@ -9,7 +9,7 @@
  */
 
 function isUnderFive(number) {
-  if (number < 21) {
+  if (number < 5) {
     return true;
   } else {
     return false;
@@ -45,11 +45,14 @@ function isOldEnoughToDrinkAndDrive(person) {
 }
 
 function categorizeAcidity(pH) {
+  if (pH < 0) {
+    return 'invalid pH level';
+  }
   if (pH < 7) {
     return 'acid';
   } if (pH === 7) {
     return 'nuetral';
-  } if (pH < 14) {
+  } if (pH <= 14) {
     return 'base';
   } else {
     return 'invalid pH level';
