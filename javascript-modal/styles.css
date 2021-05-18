@@ -1,0 +1,37 @@
+body {
+  font-family: sans-serif;
+}
+
+.button1 {
+  background-color: blueviolet;
+  height: 3rem;
+  width: 15rem;
+  color: white;
+  border-radius: 5px;
+  font-size: 1.5rem;
+}
+
+.pop-up {
+  display: none;
+}
+
+.pop-up-on {
+  height: 15rem;
+  width: 30rem;
+  position: relative;
+  text-align: center;
+  top: 10rem;
+  left: 30rem;
+  padding-top: 4rem;
+  line-height: 3rem;
+  box-shadow: 0 0 10000px 1000px rgba(16, 16, 17, 0.9);
+}
+
+.button2 {
+  margin-top: 1rem;
+  background-color: crimson;
+  font-size: 1.5rem;
+  color: white;
+  padding: 5px 25px;
+  border-radius: 5px;
+}
