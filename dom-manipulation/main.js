@@ -11,8 +11,10 @@ $hotButton.addEventListener('click', function (event) {
   } else if (number < 7) {
     temp = 'cool';
   } else if (number < 10) {
-    temp = 'warm';
+    temp = 'tepid';
   } else if (number < 13) {
+    temp = 'warm';
+  } else if (number < 16) {
     temp = 'hot';
   } else {
     temp = 'nuclear';
