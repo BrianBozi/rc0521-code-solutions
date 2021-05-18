@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  height: 13rem;
+  width: 13rem;
+  border-radius: 50%;
+  border: none;
+}
+
+.circle.on {
+  background-color: rgb(255, 247, 125);
+}
+
+.container.on {
+  background-color: #fffacd;
+}
+
+.circle.off {
+  background-color: #393e46;
+  filter: drop-shadow(0 -20px 0 black);
+}
+
+.container.off {
+  background-color: #222831;
+}
