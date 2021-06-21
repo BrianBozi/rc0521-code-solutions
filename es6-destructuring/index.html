@@ -8,22 +8,22 @@
 </head>
 <body>
   <script>
-    let book1 = {
+    const book1 = {
       title: 'Goodnight Punpun',
       author: 'Inio Asano',
       libraryID: 3353
     }
 
-    let book2 = {
+    const book2 = {
         title: 'Les Fleurs du mal',
         author: 'Charles Baudelaire',
         libraryID: 2345
       }
 
-      let { title: title2, author: author2, libraryID: libraryID2} = book2
+      const { title: title2, author: author2, libraryID: libraryID2} = book2
 
 
-    let {title, author, libraryID} = book1
+    const {title, author, libraryID} = book1
 
     console.log('The title of the book is ' + title + ', the author is ' + author + ', and the livrary id is ' + libraryID )
         console.log('The title of the book is ' + title2 + ', the author is ' + author2 + ', and the livrary id is ' + libraryID2)
@@ -52,12 +52,12 @@
         }
       ];
 
-      let [book3, book4, book5] = library
+      const [book3, book4, book5] = library
       console.log('book 3', book3)
       console.log('book 4', book4)
       console.log('book 5', book5)
 
-      let [, , , book6] = library
+      const [, , , book6] = library
       console.log('book 6', book6)
 
 
