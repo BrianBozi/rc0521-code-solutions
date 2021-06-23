@@ -3,4 +3,3 @@ function divide (x, y) {
 }
 
 module.exports = divide
-console.log(module.exports)

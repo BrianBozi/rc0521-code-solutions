@@ -3,4 +3,3 @@ function subtract ( x, y){
 }
 
 module.exports = subtract
-console.log(module.exports)

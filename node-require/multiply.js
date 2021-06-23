@@ -3,4 +3,3 @@ function multiply (x, y){
 }
 
 module.exports = multiply
-console.log(module.exports)
