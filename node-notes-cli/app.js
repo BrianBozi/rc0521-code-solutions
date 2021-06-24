@@ -26,3 +26,18 @@ else if(process.argv[2] === "create"){
  console.log('note taken')
   })
 }
+
+else if (process.argv[2] === "delete"){
+  if (data.notes[noteInput]) {
+    delete data.notes[noteInput];
+  } else {
+    console.log('No note at given ID to delete');
+  }
+
+    fs.writeFile('./data.json', JSON.stringify(data, null, 2), 'utf8', (err, create) => {
+      if (err) {
+        console.error(err)
+      }
+      console.log('note deleted')
+    })
+}
