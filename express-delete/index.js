@@ -30,7 +30,6 @@ app.get('/api/grades', function(req, res){
   for (const student in grades){
     studentGrades.push(grades[student])
   }
-  console.log(grades)
   res.json(grades)
 })
 
@@ -39,7 +38,6 @@ app.get('/api/grades', function(req, res){
 app.delete('/api/grades/:id', function(req, res) {
   const id = req.params.id
   delete grades[id]
-  console.log("the id is ", req.params.id)
 
   res.sendStatus(204)
 })
