@@ -15,7 +15,7 @@ const app = express()
 
 // get request
 app.get("/api/grades", function(req, res){
-console.log("working")
+
 
 const sql =
 `select "gradeId",
@@ -49,8 +49,6 @@ app.post("/api/grades", function(req,res){
   } else{
     const newGrade = req.body
 
-
-
     const sql =  `
       INSERT INTO "grades"("name", "course", "score")
       VALUES($1, $2, $3)
@@ -72,16 +70,19 @@ app.post("/api/grades", function(req,res){
 
 
 app.put('/api/grades/:id', function(req,res){
-  console.log("put is working")
+
   const id = parseInt(req.params.id)
-  // console.log("grade id:", id)
 
   // if the id match then we can rewrite
   const content = req.body
   const sql = `UPDATE "grades" SET "name" = $1, "course" = $2, "score" = $3 WHERE "gradeId"= $4`
   const params = [content.name, content.course, content.score, id]
 
-  console.log("These are the params", params)
+  if (!req.body) {
+    res.status(400).send({ error: 'request must have all inputs' })
+  } else if(!id){
+    res.status(404).send({ error: 'requested entry does not exist' })
+  } else {
 
   db.query(sql, params)
   .then(result =>{
@@ -91,14 +92,19 @@ app.put('/api/grades/:id', function(req,res){
     console.log(err)
     res.status(500).json({error: "missing one of the following 'name', 'course', 'score' "})
   })
+}
 
 })
 app.delete('/api/grades/:id', function (req,res){
   const id = parseInt(req.params.id)
   const sql = `DELETE FROM "grades" WHERE "gradeId" = $1`
   const params = [id]
-  console.log("The id is :", params)
-
+  if(!id){
+    res.status(400).send({ error: 'request must have valid ID' })
+  } else if(!params){
+    res.status(404).send({ error: 'requested entry doest not exist' })
+  }
+  else {
   db.query(sql, params)
   .then(result =>{
     res.status(204).json(result.rows)
@@ -108,6 +114,7 @@ app.delete('/api/grades/:id', function (req,res){
 
     res.status(500).json({error: " error querying the database"})
   })
+}
 
 })
 
