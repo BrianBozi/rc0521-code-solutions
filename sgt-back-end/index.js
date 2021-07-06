@@ -92,9 +92,25 @@ app.put('/api/grades/:id', function(req,res){
     res.status(500).json({error: "missing one of the following 'name', 'course', 'score' "})
   })
 
+})
+app.delete('/api/grades/:id', function (req,res){
+  const id = parseInt(req.params.id)
+  const sql = `DELETE FROM "grades" WHERE "gradeId" = $1`
+  const params = [id]
+  console.log("The id is :", params)
 
+  db.query(sql, params)
+  .then(result =>{
+    res.status(204).json(result.rows)
+  })
+  .catch(err =>{
+    console.log(err)
+
+    res.status(500).json({error: " error querying the database"})
+  })
 
 })
+
 
 app.listen(3000, () => {
   // http - v get: 3000 / api / grade
