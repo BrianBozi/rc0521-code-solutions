@@ -5,6 +5,6 @@ import HotButton  from './hot-button'
 
 
 ReactDOM.render(
-  <HotButton/>,
+  <HotButton />,
   document.getElementById('root')
 );
