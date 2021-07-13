@@ -1,0 +1,34 @@
+.slider {
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 2.5rem;
+
+}
+
+
+/* input:checked {
+  position: relative;
+  left: 1.2rem;
+
+} */
+
+.off{
+  background-color: grey;
+}
+
+.on {
+  background-color: greenyellow;
+}
+
+button{
+  height: 15px;
+  border: 1px solid grey;
+  position: relative;
+  left: 1px;
+}
+
+.slide{
+  position: relative;
+  left: 1.4rem;
+  top 1px
+}
