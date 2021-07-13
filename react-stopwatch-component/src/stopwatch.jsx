@@ -34,44 +34,30 @@ class StopWatch extends React.Component {
 
   reset() {
     if(this.state.button === false){
-      // this.setState{time: 0}
       this.setState({ time: 0 })
-
     }
   }
-
-
-
-  // interval(){
-
-  // }
-
-
 
   timers(){
-    // switch buttons
     if(this.state.button === false){
-      return 'fas fa-play'
+      return 'fas fa-play icon'
     } else {
-      return 'fas fa-pause'
+      return 'fas fa-pause icon'
     }
   }
 
-    render(){
-      return (
-        <div>
-        <div className={'circle'}>
-          <div onClick={()=> this.reset()}  className="watchFace">
-          <h1>{this.state.time}</h1>
-          </div>
+  render(){
+    return (
+      <div>
+      <div className={'circle'}>
+        <div onClick={()=> this.reset()}  className="watchFace">
+        <h1>{this.state.time}</h1>
         </div>
-          <i onClick={()=> this.stopWatch()} className={this.timers()}></i>
-        </div>
-        // <button onClick= {() => this.handleClick()}> <i class="fas fa-pause"></i> </button>
+      </div>
+        <i onClick={()=> this.stopWatch()} className={this.timers()}></i>
+      </div>
       )
     }
   }
-
-
 
 export default StopWatch
