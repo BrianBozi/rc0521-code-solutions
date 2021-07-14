@@ -1,0 +1,23 @@
+.circle {
+  border: 5px solid black;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+h1 {
+  text-align: center;
+  position: relative;
+  top: 10px;
+}
+.icon {
+  position: relative;
+  left: 50px;
+  top: 25px;
+  cursor: pointer;
+}
+
+.watchFace{
+  cursor: pointer;
+  border: 1 px solid red;
+}
