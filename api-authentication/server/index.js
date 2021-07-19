@@ -61,13 +61,16 @@ const sql = `
 .then(result => {
   const [user] = result.rows
   if(!user) {
-    throw new ClientError(404, 'Invalid Login')
+    throw new ClientError(401, 'Invalid Login')
   }
-  console.log(result)
   const {userId, hashedPassword} = user;
-  argon2
+  return argon2
   .verify(hashedPassword, password)
-    .then(isMacthing => {
+    .then(isMatching => {
+      console.log("does the password match?",isMatching)
+      if(!isMatching){
+        throw new ClientError(401, 'invalid password')
+      }
       const payload = {
         userId, username
       }
@@ -75,6 +78,7 @@ const sql = `
       res.status(200).json({token, user: payload})
    })
   })
+  .catch(err => next(err))
 
   /**
    * Query the database to find the "userId" and "hashedPassword" for the "username".
