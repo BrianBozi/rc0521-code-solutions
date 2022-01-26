@@ -1,0 +1,53 @@
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+}
+
+.col-full {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+.col-5 {
+  flex-basis: calc(100% / 5);
+  margin: 15px;
+}
+
+img {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.lv-bag {
+  margin-top: 1.7rem;
+}
+
+.price {
+  background-color: #fffbce;
+}
+
+.retailPrice {
+  text-decoration: line-through;
+  color: grey;
+}
+
+.size {
+  color: grey;
+}
+
+h4 {
+  font-size: 12px;
+}
+
+p {
+  font-size: 13px;
+}
